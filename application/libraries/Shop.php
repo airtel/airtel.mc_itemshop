@@ -169,6 +169,11 @@ class Shop
     }
     
     
+    /**
+     * Returns key of active payment method
+     * @param type $end_price
+     * @return int
+     */
     public function get_active_paymethod($end_price)
     {
         $i = 1;
