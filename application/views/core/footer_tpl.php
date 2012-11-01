@@ -52,6 +52,7 @@
     <!-- Airtel -->
     <script src="<?php echo base_url(); ?>js/airtel.init.js"></script>
     <script src="<?php echo base_url(); ?>js/airtel.validation.js"></script>
+    <script src="<?php echo base_url(); ?>js/airtel.iframe.js"></script>
     
     <script>
         $(document).ready(function() {
