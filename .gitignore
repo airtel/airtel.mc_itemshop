@@ -1,0 +1,27 @@
+#################
+## Netbeans
+#################
+
+nbproject
+
+
+
+#################
+## Codeigniter
+#################
+
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+
+
+#################
+## Itemshop
+#################
+application/config/database.php
+application/config/itemshop/master.php
