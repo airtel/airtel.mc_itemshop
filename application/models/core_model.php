@@ -14,7 +14,7 @@ class Core_model extends CI_Model {
      */
     public function get_items($category_id, $sub_type = NULL)
     {
-        $q = $this->db->select('i.id, i.category, i.item_name, i.image_id, i.sub_type, i.sub_material, i.price_sms_lv')
+        $q = $this->db->select('i.id, i.category, i.item_name, i.image_id, i.sub_type, i.sub_material, i.price_sms_lv, i.pieces')
                       ->from('items i')
                       ->where('i.category', $category_id)
                       ->where('i.active', '1')

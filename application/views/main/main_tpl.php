@@ -110,7 +110,7 @@
 
                             <li class="dropdown">
                                 <a id="item-<?php echo $item->id; ?>" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
-                                    <img src="<?php echo base_url(); ?>img/items/<?php echo $item->image_id; ?>.png" class="img-polaroid shadow_select" alt="" title="<?php echo $item->item_name; ?>" />
+                                    <img src="<?php echo base_url(); ?>img/items/<?php echo $item->image_id; ?>.png" class="img-polaroid shadow_select" alt="" title="<?php echo $item->item_name; ?> ( <?php echo $item->pieces; ?> gab. )" />
                                 </a>
                                 <ul id="menu-<?php echo $item->id; ?>" class="dropdown-menu" aria-labelledby="menu-<?php echo $item->id; ?>" role="menu">
                                     <li><a class="cart-add" data-item-id="<?php echo $item->id; ?>" tabindex="-1" href="#" style="line-height: 1;"><i class="icon-shopping-cart icon-large"></i> Pievienot grozam</a></li>
