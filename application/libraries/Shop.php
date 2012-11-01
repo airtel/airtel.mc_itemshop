@@ -169,4 +169,20 @@ class Shop
     }
     
     
+    public function get_active_paymethod($end_price)
+    {
+        $i = 1;
+        foreach($this->CI->module->pay_methods as $pay_method)
+        {
+            if($end_price['price_'.$pay_method] >= $this->CI->module->pay_options[$pay_method]['limits']['min'] && $end_price['price_'.$pay_method] <= $this->CI->module->pay_options[$pay_method]['limits']['max'])
+            {
+                return $i;
+            }
+            
+            $i++;
+        }
+        
+    }
+    
+    
 }

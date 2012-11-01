@@ -37,15 +37,16 @@ echo form_open(current_url(), array('id' => 'checkout-payment', 'class' => 'form
 
                 <?php
                 $i = 1;
+                $active = $this->shop->get_active_paymethod($end_price);
+                
                 foreach($this->module->pay_methods as $pay_method):
-                    
-                    //$payment_limits = $this->config->item($pay_method, 'payment_limits');
-                    
                     ?>
-                    <li class="<?php echo ($i == 1) ? 'active' : ''; ?>">
-                        <a href="#tab_br<?php echo $i; ?>" <?php echo ($end_price['price_'.$pay_method] >= $this->module->pay_options[$pay_method]['limits']['min'] && $end_price['price_'.$pay_method] <= $this->module->pay_options[$pay_method]['limits']['max']) ? 'data-toggle="tab"' : 'class="disabled" title="Piedod, bet pirkuma summa ir pārāk maza, lai izmantotu šo apmaksas metodi. Izmanto grozu un paņem vairāk!"'?>>
+                    <li class="<?php echo ($i == $active) ? 'active' : ''; ?>">
+                        
+                        <a href="#tab_br<?php echo $i; ?>" <?php echo ($end_price['price_'.$pay_method] >= $this->module->pay_options[$pay_method]['limits']['min'] && $end_price['price_'.$pay_method] <= $this->module->pay_options[$pay_method]['limits']['max']) ? 'data-toggle="tab"' : 'class="disabled" title="Piedod, bet pirkuma summa ir pārāk maza vai liela, lai izmantotu šo apmaksas metodi. Izmanto grozu un paņem vairāk, vai izmet lieko!"'?>>
                             <i class="payment <?php echo $pay_method; ?>"></i><?php echo $this->module->pay_options[$pay_method]['name']; ?>
                         </a>
+                        
                     </li>
                     <?php
                     $i++;
@@ -60,7 +61,7 @@ echo form_open(current_url(), array('id' => 'checkout-payment', 'class' => 'form
                 $i = 1;
                 foreach($this->module->pay_methods as $pay_method):
                     ?>
-                    <div class="tab-pane <?php echo ($i == 1) ? 'active' : ''; ?>" id="tab_br<?php echo $i; ?>" style="min-height: 290px;">
+                    <div class="tab-pane <?php echo ($i == $active) ? 'active' : ''; ?>" id="tab_br<?php echo $i; ?>" style="min-height: 290px;">
 
                         <?php
                         foreach($this->config->item('fields_'.$pay_method) as $field => $options):
