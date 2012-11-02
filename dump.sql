@@ -320,10 +320,6 @@ CREATE TABLE IF NOT EXISTS `mcshop_sessions` (
 -- Dumping data for table `mcshop_sessions`
 --
 
-INSERT INTO `mcshop_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('c3441b086c7d12e8fa07dc845ed59b4c', '91.142.9.17', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:17.0) Gecko/17.0 Firefox/17.0', 1351808385, 'a:1:{s:13:"cart_contents";a:3:{s:32:"53b04ce6d58f3c3e0112287e8766c10b";a:8:{s:5:"rowid";s:32:"53b04ce6d58f3c3e0112287e8766c10b";s:2:"id";s:3:"102";s:3:"qty";s:1:"1";s:5:"price";s:2:"35";s:4:"name";s:12:"Redstone Ore";s:7:"options";a:3:{s:6:"pieces";s:2:"64";s:7:"item_id";s:2:"73";s:8:"image_id";s:2:"73";}s:6:"prices";a:3:{s:9:"price_sms";s:2:"35";s:11:"price_ibank";s:4:"0.35";s:12:"price_paypal";s:4:"0.50";}s:8:"subtotal";i:35;}s:11:"total_items";i:1;s:10:"cart_total";i:35;}}'),
-('c8399cf99fe75910698b9c81e01c6d57', '80.232.243.129', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:17.0) Gecko/17.0 Firefox/17.0', 1351808199, '');
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
