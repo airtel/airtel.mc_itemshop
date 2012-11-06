@@ -22,7 +22,7 @@ class Error_handler {
         
         if($this->CI->uri->segment(4) != 'error')
         {
-            redirect($this->CI->uri->segment(1).'/shop/'.$this->module->active_category.'/error');
+            redirect('main/shop/1/error');
         }
     }
     
