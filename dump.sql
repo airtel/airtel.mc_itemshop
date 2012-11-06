@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `enchantments` (
   `levelprice_ibank` varchar(5) DEFAULT NULL,
   `levelprice_paypal` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`enchantment_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `enchantments`
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS `mcshop_sessions` (
   `user_data` text NOT NULL,
   PRIMARY KEY (`session_id`),
   KEY `last_activity_idx` (`last_activity`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `mcshop_sessions`
