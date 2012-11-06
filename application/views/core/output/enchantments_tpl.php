@@ -22,7 +22,7 @@ foreach($enchantments as $e):
         <label class="control-label" title="<?php echo $e->desc; ?>"><span class="label label-info"><?php echo $e->name; ?>:</span></label>
         <div class="controls">
 
-            <select id="<?php echo $e->cmd; ?>" name="<?php echo $e->cmd; ?>" class="chosen enchantment-menu">
+            <select id="<?php echo $e->cmd; ?>" name="<?php echo $e->cmd; ?>" class="chosen enchantment-menu" data-level-price="<?php echo $e->levelprice_sms_lv; ?>">
                 <option value="0">Bez uzlabojumiem</option>
 
                 <?php
@@ -52,7 +52,8 @@ endforeach;
     // Calculate price
     $(".enchantment-menu").chosen({disable_search_threshold: 25}).change(function(){
 
-        var calculatedPrice = airtel_misc.calcPrice(total, 15);
+        var levelPrice = $(this).data('level-price');
+        var calculatedPrice = airtel_misc.calcPrice(total, levelPrice);
         var totalSmsPrice = default_prices[airtel_misc.getNextClosest(default_prices, calculatedPrice)];
 
         // Calculated price with item upgrades
